@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Domain
 {
-    public class Pet : ISubject
+    public class Pet : 
     {
         private List<IObserver> observers = new List<IObserver>();
 
