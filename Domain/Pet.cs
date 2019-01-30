@@ -17,17 +17,17 @@ namespace Domain
 
         }
 
-        public void Attach(ISubscriber o)
+        public void RegisterSubscriber(ISubscriber o)
         {
             observers.Add(o);
         }
 
-        public void Detach(ISubscriber o)
+        public void RemoveSubscriber(ISubscriber o)
         {
             observers.Remove(o);
         }
 
-        public void Notify()
+        public void NotifySubscribers(string message)
         {
             foreach (PetRepo p in observers)
             {
