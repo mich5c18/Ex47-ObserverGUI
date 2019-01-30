@@ -9,7 +9,7 @@ namespace Domain
 {
     public class Pet : IPublisher
     {
-        private List<IObserver> observers = new List<IObserver>();
+        private List<ISubscriber> observers = new List<ISubscriber>();
 
 
         public Pet(string name, string type, string breed, string dob, float weight, int ownerID)
@@ -17,12 +17,12 @@ namespace Domain
 
         }
 
-        public void Attach(IObserver o)
+        public void Attach(ISubscriber o)
         {
             observers.Add(o);
         }
 
-        public void Detach(IObserver o)
+        public void Detach(ISubscriber o)
         {
             observers.Remove(o);
         }
