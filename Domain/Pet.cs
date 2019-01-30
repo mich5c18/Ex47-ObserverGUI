@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Service;
 
 namespace Domain
 {
-    public class Pet : 
+    public class Pet : IPublisher
     {
         private List<IObserver> observers = new List<IObserver>();
 

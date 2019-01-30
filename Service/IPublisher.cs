@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application
+namespace Service
 {
-    interface IPublisher
+    public interface IPublisher
     {
         void RegisterSubscriber(ISubscriber observer);
         void RemoveSubscriber(ISubscriber observer);
