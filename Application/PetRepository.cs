@@ -10,15 +10,15 @@ namespace Application
 {
     public class PetRepository : ISubscriber, IPublisher
     {
-        private List<ISubscriber> observers = new List<ISubscriber>();
+        private List<ISubscriber> observers = new List<ISubscriber>(); //Liste af subscribers
 
-        List<Pet> pets = new List<Pet>();
+        List<Pet> pets = new List<Pet>(); //Liste af Pets
 
         public void AddPet(string name, string type, string breed, string dOB, string weight)
         {
-            Pet pet = new Pet(name, type, breed, dOB, weight);
-            pets.Add(pet);
-            pet.RegisterSubscriber(this);
+            Pet pet = new Pet(name, type, breed, dOB, weight); //Laver en instans af Pet
+            pets.Add(pet); //Tilføjer pet til listen af Pets
+            pet.RegisterSubscriber(this); //Bliver til en subscriber til pet
         }
 
         public void RegisterSubscriber(ISubscriber o)

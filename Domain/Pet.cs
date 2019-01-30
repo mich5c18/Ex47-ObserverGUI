@@ -14,7 +14,7 @@ namespace Domain
         private string _name;
         public string Name {
             get { return _name; }
-            set { _name = value; NotifySubscribers("Name"); }
+            set { _name = value; NotifySubscribers("Name"); } //kalder notify og giver den et parameter. Her "Name"
         }
 
         private string _type;
