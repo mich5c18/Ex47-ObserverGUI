@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Application
 {
-    public class PetRepository : IObserver
+    public class PetRepository : ISubscriber
     {
         public void Update()
         {

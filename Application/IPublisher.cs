@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Application
 {
-    interface IPublisher
+    public interface IPublisher
     {
         void RegisterSubscriber(ISubscriber observer);
         void RemoveSubscriber(ISubscriber observer);
