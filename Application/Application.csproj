@@ -45,6 +45,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Domain\Domain.csproj">
+      <Project>{1fd859ad-5fab-41c9-a8e9-0f7436c9b04b}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Service\Service.csproj">
       <Project>{e3c8230a-f672-4108-a206-d564fb4932ba}</Project>
       <Name>Service</Name>
