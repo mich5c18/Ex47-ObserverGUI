@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace Application
 {
-    class PetRepository
+    public class PetRepository : IObserver
     {
-
+        public void Update()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
