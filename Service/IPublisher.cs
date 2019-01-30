@@ -11,6 +11,5 @@ namespace Service
         void RegisterSubscriber(ISubscriber observer);
         void RemoveSubscriber(ISubscriber observer);
         void NotifySubscribers(string message);
-
     }
 }

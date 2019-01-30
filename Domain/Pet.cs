@@ -11,10 +11,43 @@ namespace Domain
     {
         private List<ISubscriber> observers = new List<ISubscriber>();
 
+        private string _name;
+        public string Name {
+            get { return _name; }
+            set { _name = value; NotifySubscribers("Name"); }
+        }
 
-        public Pet(string name, string type, string breed, string dob, float weight, int ownerID)
+        private string _type;
+        public string Type {
+            get { return _type; }
+            set { _type = value; NotifySubscribers("Type"); }
+        }
+
+        private string _breed;
+        public string Breed {
+            get { return _breed; }
+            set {  _breed = value; NotifySubscribers("Breed"); }
+        }
+
+        private string _dob;
+        public string DOB {
+            get { return _dob; }
+            set { _dob = value; NotifySubscribers("DOB"); }
+        }
+
+        private string _weight;
+        public string Weight {
+            get { return _weight; }
+            set { _weight = value; NotifySubscribers("Weight"); }
+        }
+
+        public Pet(string name, string type, string breed, string dOB, string weight)
         {
-
+            Name = name;
+            Type = type;
+            Breed = breed;
+            DOB = dOB;
+            Weight = weight;
         }
 
         public void RegisterSubscriber(ISubscriber o)
@@ -29,9 +62,9 @@ namespace Domain
 
         public void NotifySubscribers(string message)
         {
-            foreach (PetRepo p in observers)
+            foreach (ISubscriber o in observers)
             {
-                p.Update();
+                o.Update(this, message);
             }
         }
     }
