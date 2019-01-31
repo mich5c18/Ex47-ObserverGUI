@@ -14,7 +14,7 @@ namespace Application
 
         List<Pet> pets = new List<Pet>(); //Liste af Pets
 
-        public void AddPet(string name, string type, string breed, string dOB, string weight)
+        public void AddPet(string name, string type, string breed, string dOB, string weight) //UI må ikke kende til Domain, så man skal give alle parametre, selv om man bare kunne skrive PET pet
         {
             Pet pet = new Pet(name, type, breed, dOB, weight); //Laver en instans af Pet
             pets.Add(pet); //Tilføjer pet til listen af Pets
